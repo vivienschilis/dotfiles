@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+list=$( tmux -2 -u ls)
+if [ $? -eq 1 ]; then # no active sessions
+  echo "No active sessions!, statrting a new one"
+  tmux -2 -u
+else
+  session=$(echo $list | grep attached | cut -d : -f 1)
+  echo "Joining Session: $session"
+  if [ -z "$session" ] ; then
+    session=$(echo $list | head -1 | cut -d : -f 1)
+  fi
+  tmux -2 -u new-session -t $session
+fi
