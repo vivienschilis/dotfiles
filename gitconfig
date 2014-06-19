@@ -1,55 +1,42 @@
 [user]
-# vi: ft=gitconfig
   email = vivien.schilis@gmail.com
   name = Vivien Schilis
 [github]
   username = vivienschilis
   user = vivienschilis
-[color]
-  ui = true
-  diff = true
-[core]
-  pager = less -F -X
-	excludesfile = /home/vagrant/.gitignore_global
 [grep]
   linenumber = true
   extendedRegexp = true
-
 [push]
   default = current
-
 [alias]
-  last-commit = log -n1 --format=%H
-  c = commit
-  cm = commit -m
-  co = checkout
-  g = !git --no-pager grep --color -n
-  l = log
-  lo = log --graph --oneline --abbrev-commit
-  ll = log --graph --pretty='format:%h | %an | %s'
-  pr = pull --rebase
-  pull-all = pull --recurse-submodules -r
   s = status
-  ss = status -sb
-  m = merge --no-ff
-  zip-current-branch = !git archive --format zip --output ./$(pwd | rev | cut -d/ -f1 | rev).zip $(git cb)
-  last = log -n1 --pretty="%H"
-
-  d = diff
+  ci = commit
+  co = checkout
+  gogogo = !git aa && git continue
+  continue = rebase --continue
+  skip = rebase --skip
+  di = diff
   dc = diff --cached
-  wd = diff --color-words
-  wdc = diff --color-words --cached
-
-  serve = daemon --reuseaddr --verbose  --port=4000 --base-path=. --export-all ./.git
-
-  cb = !git symbolic-ref HEAD 2>/dev/null |  sed "s/refs.heads.//"
-  edit-modified = !vim -p $(git ls-files -m )
-  push-and-track= !git push -u origin $(git cb)
-  safe-pull = !git stash && git pull -r origin $(git cb) && git stash pop
-
-  recent-branches = !git for-each-ref --sort=-committerdate refs/heads/ | sed 's/commit.*refs.heads.//'
-
-  llog = log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s' --date=iso
-  changelog = log --pretty=format:'%Cgreen%d %Creset%s' --date=iso
-[branch]
-  autosetupmerge = true
+  amend = commit --amend
+  aa = add --all
+  head = !git l -1
+  r = !git l -30
+  l = log --graph --abbrev-commit --date=relative
+  pom = push origin master
+  pop = stash pop
+  b = branch
+  standup = log --since yesterday
+[core]
+  editor = vim -f
+  quotepath = false
+  autocrlf = input
+  excludesfile = ~/.gitignore_global
+[color]
+  ui = auto
+[format]
+  pretty = format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset
+[merge]
+  conflictstyle = diff3
+[rerere]
+  enabled = true
