@@ -1,4 +1,4 @@
-LIST = irbrc pryrc tmux.conf rvmrc ackrc  gitconfig bashrc jshint.json ctags inputrc gitignore_global zshrc zshenv
+LIST = irbrc pryrc tmux.conf ackrc gitconfig bashrc gitignore_global zshrc zshenv
 
 default: update
 
