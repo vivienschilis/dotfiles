@@ -55,3 +55,4 @@ alias be="bundle exec"
 alias r="bundle exec rails"
 alias brake="bundle exec rake"
 
+eval "$(direnv hook zsh)"
