@@ -42,6 +42,8 @@ export PATH="$HOME/.DotFiles/bins:$PATH"
 
 export EDITOR=vi
 
+export LC_ALL=en_US.UTF-8
+
 # Misc aliases
 alias ll="ls -la"
 alias sr="screen -r"
