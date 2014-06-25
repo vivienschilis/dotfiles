@@ -28,6 +28,7 @@
   b = branch
   standup = log --since yesterday
 [core]
+  pager = less -F -X
   editor = vim -f
   quotepath = false
   autocrlf = input
