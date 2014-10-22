@@ -17,4 +17,7 @@ update:
 safe-update:
 	git stash || make update || git stash pop
 
+ohmyzsh:
+	git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+
 setup : link update private
