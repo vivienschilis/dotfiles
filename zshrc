@@ -32,7 +32,7 @@ source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
 # Display a full range of colours
-export TERM=xterm-256color
+export TERM=screen-256color
 
 # Set up default PATH
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/texbin
@@ -47,6 +47,7 @@ export LC_ALL=en_US.UTF-8
 # Misc aliases
 alias ll="ls -la"
 alias sr="screen -r"
+alias tmux="tmux -2"
 
 # Load the script containing my aliases for SSH'ing into various servers
 [[ -s "$HOME/.ssh/aliases" ]] && source "$HOME/.ssh/aliases"
