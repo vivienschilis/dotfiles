@@ -35,7 +35,7 @@ unsetopt correct_all
 export TERM=screen-256color
 
 # Set up default PATH
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/texbin
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/texbin:$HOME/bin
 
 # Add DotFiles bins
 export PATH="$HOME/.DotFiles/bins:$PATH"
