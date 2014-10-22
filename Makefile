@@ -1,4 +1,4 @@
-LIST = irbrc pryrc tmux.conf ackrc gitconfig bashrc gitignore_global zshrc zshenv
+LIST = irbrc pryrc tmux.conf ackrc gitconfig gitignore_global zshrc zshenv
 
 default: update
 
