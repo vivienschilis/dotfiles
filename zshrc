@@ -50,12 +50,6 @@ alias sr="screen -r"
 alias tmux="tmux -2"
 
 # Load the script containing my aliases for SSH'ing into various servers
-[[ -s "$HOME/.ssh/aliases" ]] && source "$HOME/.ssh/aliases"
-
-# Ruby/Railsy aliases
-alias migrate="rake db:migrate && rake db:test:prepare"
-alias be="bundle exec"
-alias r="bundle exec rails"
-alias brake="bundle exec rake"
+[[ -f ~/.aliases  ]] && source ~/.aliases
 
 eval "$(direnv hook zsh)"

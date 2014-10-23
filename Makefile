@@ -1,4 +1,4 @@
-LIST = irbrc pryrc tmux.conf ackrc gitconfig gitignore_global zshrc zshenv
+LIST = irbrc pryrc tmux.conf ackrc gitconfig gitignore_global zshrc zshenv aliases
 
 default: update
 
