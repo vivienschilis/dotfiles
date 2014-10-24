@@ -44,6 +44,8 @@ export EDITOR=vi
 
 export LC_ALL=en_US.UTF-8
 
+export PS1="${ret_status} `whoami` %{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}"
+
 # Misc aliases
 alias ll="ls -la"
 alias sr="screen -r"
