@@ -51,7 +51,8 @@ alias ll="ls -la"
 alias sr="screen -r"
 alias tmux="tmux -2"
 
-# Load the script containing my aliases for SSH'ing into various servers
 [[ -f ~/.aliases  ]] && source ~/.aliases
+
+[[ -f ~/.zshrc.local  ]] && source ~/.zshrc.local
 
 eval "$(direnv hook zsh)"
