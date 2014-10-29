@@ -1,4 +1,6 @@
 # Path to your oh-my-zsh configuration.
+export DOTFILES_DIR=$HOME/.DotFiles
+
 ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
@@ -38,7 +40,7 @@ export TERM=screen-256color
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/texbin:$HOME/bin
 
 # Add DotFiles bins
-export PATH="$HOME/.DotFiles/bins:$PATH"
+export PATH="$DOTFILES_DIR/bins:$PATH"
 
 export EDITOR=vi
 
