@@ -117,19 +117,12 @@ set complete=.,w,b,u,t
 " When spellcheck is enabled, autocomplete from dictionary
 set complete+=kspell
 
-" Tags
-let Tlist_Ctags_Cmd = "/usr/local/bin/ctags -R --exclude=.git --exclude=log -f ./.tags *"
-set tags+=.tags
-
-" Tags
-let Tlist_Ctags_Cmd = "/usr/local/bin/ctags -R --exclude=.git --exclude=log -f ./.tags *"
-set tags+=.tags
-
 " Nerdtree start on open console
 " let g:nerdtree_tabs_open_on_console_startup=1
 
 " Silent
 set noerrorbells visualbell t_vb=
+
 source $HOME/.vim/autocommands.vim
 source $HOME/.vim/plugins.vim
 source $HOME/.vim/shortcuts.vim
