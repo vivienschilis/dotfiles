@@ -1,13 +1,13 @@
 .PHONY: vim
 
 LIST = irbrc pryrc tmux.conf ackrc gitconfig gitignore_global zshrc zshenv aliases
-MAKEFILE_DIR := $(shell dirname $(abspath $(lastword $(MAKEFILE_LIST))))
-
+DOTFILES_DIR := $(shell dirname $(abspath $(lastword $(MAKEFILE_LIST))))
+export DOTFILES_DIR
 
 default: setup
 
 link: $(LIST)
-	for f in $(LIST) ; do ln -fvs ${MAKEFILE_DIR}/$$f ~/.$$f; done
+	for f in $(LIST) ; do ln -fvs ${DOTFILES_DIR}/$$f ~/.$$f; done
 
 unlink: $(LIST)
 	@for f in $(LIST) ; do rm ~/.$$f; done
@@ -27,4 +27,4 @@ ohmyzsh:
 setup : link update private
 
 vim:
-	$(MAKE) -C ${MAKEFILE_DIR}/vim
+	$(MAKE) -C ${DOTFILES_DIR}/vim
