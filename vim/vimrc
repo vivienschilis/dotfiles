@@ -2,6 +2,8 @@ set nocompatible
 filetype off
 
 set encoding=utf-8
+set fileencoding=utf-8
+
 scriptencoding utf-8
 
 " Setup Vundle
@@ -44,7 +46,6 @@ Plugin 'cloud8421/vim-neatstatus'
 
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'fatih/vim-go'
-Plugin 'gmarik/sudo-gui.vim'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
 Plugin 'junegunn/vim-easy-align'
@@ -66,6 +67,10 @@ set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 set t_Co=256
+set showmatch           " show matching bracket (briefly jump)
+set matchtime=2         " show matching bracket for 0.2 seconds
+set showmode            " show mode in status bar (insert/replace/...)
+set matchpairs+=<:>     " specially for html
 syntax on
 
 set spelllang=en
