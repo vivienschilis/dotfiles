@@ -43,10 +43,14 @@ Plugin 'jgdavey/vim-turbux'
 Plugin 'cloud8421/vim-neatstatus'
 
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'tomasr/molokai'
 Plugin 'fatih/vim-go'
 Plugin 'gmarik/sudo-gui.vim'
-Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'mattn/gist-vim'
+Plugin 'mattn/webapi-vim'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'sjl/vitality.vim'         " AutoReload
+Plugin 'Shougo/neocomplcache.vim' " Autocompletion
+Plugin 'sdanielf/vim-stdtabs'     " Standard indentation matching language
 
 call vundle#end()
 
@@ -130,7 +134,11 @@ source $HOME/.vim/visual_fixes.vim
 
 let g:solarized_termcolors=256
 syntax enable
-set background=dark
+set background=light
 silent! colorscheme solarized
 
 let g:go_fmt_command = "goimports"
+
+" Gist
+let g:gist_post_private = 1
+let g:gist_detect_filetype = 1
