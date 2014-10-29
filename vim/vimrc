@@ -47,6 +47,7 @@ Plugin 'cloud8421/vim-neatstatus'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'fatih/vim-go'
 Plugin 'mattn/gist-vim'
+Plugin 'elzr/vim-json'
 Plugin 'mattn/webapi-vim'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'sjl/vitality.vim'         " AutoReload
