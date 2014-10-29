@@ -135,6 +135,8 @@ let g:solarized_termcolors=256
 syntax enable
 set background=light
 silent! colorscheme solarized
+set cursorline
+
 
 let g:go_fmt_command = "goimports"
 
