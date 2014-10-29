@@ -4,7 +4,7 @@ LIST = irbrc pryrc tmux.conf ackrc gitconfig gitignore_global zshrc zshenv alias
 MAKEFILE_DIR := $(shell dirname $(abspath $(lastword $(MAKEFILE_LIST))))
 
 
-default: update
+default: setup
 
 link: $(LIST)
 	for f in $(LIST) ; do ln -fvs ${MAKEFILE_DIR}/$$f ~/.$$f; done
