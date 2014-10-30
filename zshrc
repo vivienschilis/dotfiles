@@ -1,6 +1,6 @@
-# Path to your oh-my-zsh configuration.
 export DOTFILES_DIR=$HOME/.DotFiles
 
+# Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.

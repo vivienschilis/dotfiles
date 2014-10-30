@@ -24,7 +24,7 @@ safe-update:
 ohmyzsh:
 	git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
-setup : link update private
+setup : link update
 
 vim:
 	$(MAKE) -C ${DOTFILES_DIR}/vim
