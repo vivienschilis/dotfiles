@@ -131,7 +131,6 @@ source $HOME/.vim/syntax.vim
 source $HOME/.vim/tmux.vim
 source $HOME/.vim/visual_fixes.vim
 
-let g:solarized_termcolors=256
 syntax enable
 set background=light
 silent! colorscheme solarized
