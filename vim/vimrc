@@ -53,6 +53,7 @@ Plugin 'junegunn/vim-easy-align'
 Plugin 'sjl/vitality.vim'         " AutoReload
 Plugin 'Shougo/neocomplcache.vim' " Autocompletion
 Plugin 'sdanielf/vim-stdtabs'     " Standard indentation matching language
+Plugin 'bogado/file-line'
 
 call vundle#end()
 
