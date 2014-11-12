@@ -46,7 +46,7 @@ export EDITOR=vi
 
 export LC_ALL=en_US.UTF-8
 
-PROMPT='${ret_status} %n@%{$fg_bold[green]%}%p%{$fg[cyan]%}%c%{$fg_bold[blue]%} %% %{$reset_color%}'
+PROMPT='${ret_status} %n@ %{$fg_bold[green]%}%p%{$fg[cyan]%}%c%{$fg_bold[blue]%} %% %{$reset_color%}'
 RPROMPT='$(git_prompt_info)'
 
 # Misc aliases
