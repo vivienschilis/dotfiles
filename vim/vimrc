@@ -85,8 +85,8 @@ fixdel
 " Send more characters for redraws
 set ttyfast
 
-" Use Bash as shell
-set shell=/bin/bash
+" Use Default shell
+set shell ?
 
 " Enable mouse use in all modes
 set mouse=a
