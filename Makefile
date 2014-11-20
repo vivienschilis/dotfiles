@@ -6,7 +6,7 @@ DOTFILES_DIR := ${.CURDIR}
 default: setup
 
 link: $(LIST)
-	for f in $(LIST) ; do ln -fvs ${DOTFILES_DIR}/$$f ~/.$$f; done
+	for f in $(LIST) ; do ln -fs ${DOTFILES_DIR}/$$f ~/.$$f; done
 
 unlink: $(LIST)
 	@for f in $(LIST) ; do rm ~/.$$f; done
