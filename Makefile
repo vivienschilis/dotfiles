@@ -26,4 +26,4 @@ ohmyzsh:
 setup : link update
 
 vim:
-	$(MAKE) -C ${DOTFILES_DIR}/vim DOTFILES_DIR=${DOTFILES_DIR}
+	$(MAKE) -f ${DOTFILES_DIR}/vim/Makefile DOTFILES_DIR=${DOTFILES_DIR}
