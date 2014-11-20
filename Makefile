@@ -2,7 +2,6 @@
 
 LIST = irbrc pryrc tmux.conf ackrc gitconfig gitignore_global zshrc zshenv aliases
 DOTFILES_DIR := $(shell dirname $(abspath $(lastword $(MAKEFILE_LIST))))
-export DOTFILES_DIR
 
 default: setup
 
@@ -27,4 +26,4 @@ ohmyzsh:
 setup : link update
 
 vim:
-	$(MAKE) -C ${DOTFILES_DIR}/vim
+	$(MAKE) -C ${DOTFILES_DIR}/vim DOTFILES_DIR=${DOTFILES_DIR}
