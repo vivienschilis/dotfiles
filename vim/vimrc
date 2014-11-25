@@ -85,9 +85,6 @@ fixdel
 " Send more characters for redraws
 set ttyfast
 
-" Use Default shell
-set shell ?
-
 " Enable mouse use in all modes
 set mouse=a
 set ttymouse=xterm2
