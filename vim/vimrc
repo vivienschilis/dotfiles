@@ -55,6 +55,9 @@ Plugin 'Shougo/neocomplcache.vim' " Autocompletion
 Plugin 'sdanielf/vim-stdtabs'     " Standard indentation matching language
 Plugin 'bogado/file-line'
 
+Plugin 'mhinz/vim-startify'
+Plugin 'tpope/vim-eunuch'
+
 call vundle#end()
 
 set nobackup
