@@ -54,9 +54,10 @@ Plugin 'sjl/vitality.vim'         " AutoReload
 Plugin 'Shougo/neocomplcache.vim' " Autocompletion
 Plugin 'sdanielf/vim-stdtabs'     " Standard indentation matching language
 Plugin 'bogado/file-line'
-
 Plugin 'mhinz/vim-startify'
 Plugin 'tpope/vim-eunuch'
+
+Plugin 'scrooloose/syntastic'
 
 call vundle#end()
 
@@ -143,3 +144,12 @@ let g:go_fmt_command = "goimports"
 " Gist
 let g:gist_post_private = 1
 let g:gist_detect_filetype = 1
+
+" Stupid shift key fixes
+com! W w
+com! WQ wq
+com! Wq wq
+com! Q q
+
+" Write the file as sudoer
+cmap w!! w !sudo tee % >/dev/null
