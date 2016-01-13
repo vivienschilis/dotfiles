@@ -59,6 +59,8 @@ Plugin 'tpope/vim-eunuch'
 
 Plugin 'scrooloose/syntastic'
 
+Plugin 'NLKNguyen/papercolor-theme'
+
 call vundle#end()
 
 set nobackup
@@ -135,7 +137,7 @@ source $HOME/.vim/visual_fixes.vim
 
 syntax enable
 set background=light
-silent! colorscheme solarized
+silent! colorscheme PaperColor
 set cursorline
 
 
