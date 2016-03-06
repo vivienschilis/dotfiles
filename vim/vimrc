@@ -57,6 +57,8 @@ Plugin 'bogado/file-line'
 Plugin 'mhinz/vim-startify'
 Plugin 'tpope/vim-eunuch'
 
+Plugin 'ntpeters/vim-better-whitespace'
+
 Plugin 'scrooloose/syntastic'
 
 Plugin 'NLKNguyen/papercolor-theme'
