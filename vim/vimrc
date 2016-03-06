@@ -104,12 +104,20 @@ set expandtab
 
 " Display extra whitespace
 set list listchars=tab:»·,trail:·
+
+" Remove white spaces
+autocmd BufWritePre * :%s/\s\+$//e
+
 " Clipboard fix for OsX
 set clipboard=unnamed
 
 " Numbers
 set number
 set numberwidth=2
+
+" short lines
+set lines=35 columns=150
+set colorcolumn=90
 
 "Folding
 set foldmethod=indent
@@ -155,3 +163,7 @@ com! Q q
 
 " Write the file as sudoer
 cmap w!! w !sudo tee % >/dev/null
+
+set guifont=Menlo\ Regular:h18
+
+set wildignore+=*/.hg/*,*/.svn/*,*/vendor/cache/*,*/public/system/*,*/tmp/*,*/log/*,*/.git/*,*/.jhw-cache/*,*/solr/data/*,*/node_modules/*,*/.DS_Store
