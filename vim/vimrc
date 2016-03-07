@@ -18,51 +18,31 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'tmhedberg/matchit'
 Plugin 'vim-scripts/tComment'
-Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'airblade/vim-gitgutter'
-
-Plugin 'mattn/emmet-vim'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'davidoc/taskpaper.vim'
-Plugin 'kana/vim-textobj-user'
-Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'msanders/snipmate.vim'
-
 Plugin 'benmills/vimux'
 Plugin 'pgr0ss/vimux-ruby-test'
-Plugin 'cloud8421/vimux-cucumber'
-Plugin 'jgdavey/vim-turbux'
-
-Plugin 'cloud8421/vim-neatstatus'
-
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'vim-airline/vim-airline'
 Plugin 'fatih/vim-go'
 Plugin 'mattn/gist-vim'
 Plugin 'elzr/vim-json'
-Plugin 'mattn/webapi-vim'
 Plugin 'junegunn/vim-easy-align'
-Plugin 'sjl/vitality.vim'         " AutoReload
 Plugin 'Shougo/neocomplcache.vim' " Autocompletion
 Plugin 'sdanielf/vim-stdtabs'     " Standard indentation matching language
-Plugin 'bogado/file-line'
+Plugin 'bogado/file-line'         " Open at line
 Plugin 'mhinz/vim-startify'
-Plugin 'tpope/vim-eunuch'
-
-Plugin 'ntpeters/vim-better-whitespace'
-
+Plugin 'tpope/vim-eunuch'         " Unix helpers SudoWrite
 Plugin 'scrooloose/syntastic'
-
+Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'NLKNguyen/papercolor-theme'
-
+"
 call vundle#end()
 
 set nobackup
@@ -121,7 +101,7 @@ set numberwidth=2
 set lines=35 columns=150
 set colorcolumn=90
 
-"Folding
+" Folding
 set foldmethod=indent
 set foldlevelstart=99
 
@@ -138,6 +118,8 @@ set complete+=kspell
 " Silent
 set noerrorbells visualbell t_vb=
 
+source $HOME/.vim/spelling.vim
+source $HOME/.vim/airline.vim
 source $HOME/.vim/autocommands.vim
 source $HOME/.vim/plugins.vim
 source $HOME/.vim/shortcuts.vim
@@ -149,7 +131,6 @@ syntax enable
 set background=light
 silent! colorscheme PaperColor
 set cursorline
-
 
 let g:go_fmt_command = "goimports"
 
