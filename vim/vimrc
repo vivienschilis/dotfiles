@@ -58,7 +58,7 @@ set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 set t_Co=256
 set showmatch           " show matching bracket (briefly jump)
-set matchtime=2         " show matching bracket for 0.2 seconds
+set matchtime=10         " show matching bracket for 1 seconds
 set showmode            " show mode in status bar (insert/replace/...)
 set matchpairs+=<:>     " specially for html
 syntax on
@@ -83,6 +83,8 @@ filetype plugin indent on
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set smartindent
+set autoindent
 
 " Display extra whitespace
 set list listchars=tab:»·,trail:·
