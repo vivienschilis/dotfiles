@@ -29,7 +29,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'benmills/vimux'
 Plugin 'pgr0ss/vimux-ruby-test'
-Plugin 'vim-airline/vim-airline'
+Plugin 'itchyny/lightline.vim'
 Plugin 'fatih/vim-go'
 Plugin 'mattn/gist-vim'
 Plugin 'elzr/vim-json'
@@ -119,7 +119,6 @@ set complete+=kspell
 set noerrorbells visualbell t_vb=
 
 source $HOME/.vim/spelling.vim
-source $HOME/.vim/airline.vim
 source $HOME/.vim/autocommands.vim
 source $HOME/.vim/plugins.vim
 source $HOME/.vim/shortcuts.vim
