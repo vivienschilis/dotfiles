@@ -34,7 +34,6 @@ Plugin 'fatih/vim-go'
 Plugin 'mattn/gist-vim'
 Plugin 'elzr/vim-json'
 Plugin 'junegunn/vim-easy-align'
-Plugin 'Shougo/neocomplcache.vim' " Autocompletion
 Plugin 'sdanielf/vim-stdtabs'     " Standard indentation matching language
 Plugin 'bogado/file-line'         " Open at line
 Plugin 'mhinz/vim-startify'
@@ -42,7 +41,8 @@ Plugin 'tpope/vim-eunuch'         " Unix helpers SudoWrite
 Plugin 'scrooloose/syntastic'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'NLKNguyen/papercolor-theme'
-"
+Plugin 'majutsushi/tagbar'
+
 call vundle#end()
 
 set nobackup
@@ -120,6 +120,7 @@ set complete+=kspell
 " Silent
 set noerrorbells visualbell t_vb=
 
+source $HOME/.vim/go.vim
 source $HOME/.vim/spelling.vim
 source $HOME/.vim/autocommands.vim
 source $HOME/.vim/plugins.vim
