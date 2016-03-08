@@ -6,44 +6,45 @@ set fileencoding=utf-8
 
 scriptencoding utf-8
 
-" Setup Vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'gmarik/vundle'
-Plugin 'rking/ag.vim'
-Plugin 'godlygeek/tabular'
-Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'tmhedberg/matchit'
-Plugin 'vim-scripts/tComment'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-rake'
-Plugin 'tpope/vim-surround'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'benmills/vimux'
-Plugin 'pgr0ss/vimux-ruby-test'
-Plugin 'itchyny/lightline.vim'
-Plugin 'fatih/vim-go'
-Plugin 'mattn/gist-vim'
-Plugin 'elzr/vim-json'
-Plugin 'junegunn/vim-easy-align'
-Plugin 'sdanielf/vim-stdtabs'     " Standard indentation matching language
-Plugin 'bogado/file-line'         " Open at line
-Plugin 'mhinz/vim-startify'
-Plugin 'tpope/vim-eunuch'         " Unix helpers SudoWrite
-Plugin 'scrooloose/syntastic'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'NLKNguyen/papercolor-theme'
-Plugin 'majutsushi/tagbar'
+Plug 'gmarik/vundle'
+Plug 'rking/ag.vim'
+Plug 'godlygeek/tabular'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'tmhedberg/matchit'
+Plug 'vim-scripts/tComment'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rake'
+Plug 'tpope/vim-surround'
+Plug 'jiangmiao/auto-pairs'
+Plug 'airblade/vim-gitgutter'
+Plug 'vim-ruby/vim-ruby'
+Plug 'benmills/vimux'
+Plug 'pgr0ss/vimux-ruby-test'
+Plug 'itchyny/lightline.vim'
+Plug 'fatih/vim-go'
+Plug 'mattn/gist-vim'
+Plug 'elzr/vim-json'
+Plug 'junegunn/vim-easy-align'
+Plug 'sdanielf/vim-stdtabs'     " Standard indentation matching language
+Plug 'bogado/file-line'         " Open at line
+Plug 'mhinz/vim-startify'
+Plug 'tpope/vim-eunuch'         " Unix helpers SudoWrite
+Plug 'scrooloose/syntastic'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'majutsushi/tagbar'
 
-call vundle#end()
+"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
+"Plug 'junegunn/fzf.vim'
+
+call plug#end()
 
 set nobackup
 set nowritebackup
