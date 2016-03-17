@@ -54,6 +54,10 @@ alias ll="ls -la"
 alias sr="screen -r"
 alias tmux="tmux -2"
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_TMUX_HEIGHT="60%"
+
 [[ -f ~/.aliases  ]] && source ~/.aliases
 
 [[ -f ~/.zshrc.local  ]] && source ~/.zshrc.local
