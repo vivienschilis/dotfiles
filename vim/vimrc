@@ -22,7 +22,6 @@ Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
 Plug 'tpope/vim-surround'
-Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-ruby/vim-ruby'
 Plug 'benmills/vimux'
@@ -40,6 +39,7 @@ Plug 'scrooloose/syntastic'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'majutsushi/tagbar'
+Plug 'Konfekt/FastFold'
 
 call plug#end()
 
@@ -76,6 +76,12 @@ set mouse=a
 set ttymouse=xterm2
 
 filetype plugin indent on
+
+" Allow cursor after last line character
+set virtualedit=onemore
+
+" Automatically reload modified files
+set autoread
 
 " Softtabs, 2 spaces
 set tabstop=2
