@@ -40,6 +40,7 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'majutsushi/tagbar'
 Plug 'Konfekt/FastFold'
+Plug 'romainl/vim-qf'
 
 call plug#end()
 
