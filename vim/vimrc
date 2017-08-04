@@ -41,6 +41,7 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'majutsushi/tagbar'
 Plug 'Konfekt/FastFold'
 Plug 'romainl/vim-qf'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
