@@ -1,7 +1,7 @@
 .PHONY: vim
 
 LIST = irbrc pryrc tmux.conf ackrc gitconfig gitignore_global zshrc zshenv aliases
-DOTFILES_DIR := ${.CURDIR}
+DOTFILES_DIR = "${HOME}/.dotfiles"
 
 default: setup
 
