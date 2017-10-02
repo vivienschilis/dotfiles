@@ -41,3 +41,5 @@
   conflictstyle = diff3
 [rerere]
   enabled = true
+[credential]
+	helper = store
