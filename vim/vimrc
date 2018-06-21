@@ -6,6 +6,13 @@ set fileencoding=utf-8
 
 scriptencoding utf-8
 
+" Ignore this junk
+set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
+set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
+set wildignore+=*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
+set wildignore+=*/tmp/cache/assets/*/sprockets/*,*/tmp/cache/assets/*/sass/*
+set wildignore+=*.swp,*~,._*
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'gmarik/vundle'
@@ -128,16 +135,21 @@ set complete+=kspell
 " Nerdtree start on open console
 " let g:nerdtree_tabs_open_on_console_startup=1
 
+" Use Ag over Grep
+set grepprg=ag\ --nogroup\ --nocolor
+
+" Leader-S to search
+map <Leader>s :Ag -i ''<Left>
+
+" status line
+set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
+
 " Silent
 set noerrorbells visualbell t_vb=
 
 source $HOME/.vim/go.vim
 source $HOME/.vim/spelling.vim
-source $HOME/.vim/autocommands.vim
-source $HOME/.vim/plugins.vim
-source $HOME/.vim/shortcuts.vim
 source $HOME/.vim/syntax.vim
-source $HOME/.vim/tmux.vim
 source $HOME/.vim/visual_fixes.vim
 
 syntax enable
@@ -161,3 +173,9 @@ cmap w!! w !sudo tee % >/dev/null
 set guifont=Menlo\ Regular:h18
 
 set wildignore+=*/.hg/*,*/.svn/*,*/vendor/cache/*,*/public/system/*,*/tmp/*,*/log/*,*/.git/*,*/.jhw-cache/*,*/solr/data/*,*/node_modules/*,*/.DS_Store
+
+" Prompt for a command to run
+map <Leader>vp :VimuxPromptCommand<CR>
+
+map <Leader>t :GoTest<CR>
+map <Leader>a :GoAlternate<CR>
