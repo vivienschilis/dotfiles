@@ -42,6 +42,11 @@ Plug 'majutsushi/tagbar'
 Plug 'Konfekt/FastFold'
 Plug 'romainl/vim-qf'
 Plug 'tpope/vim-fugitive'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'elixir-editors/vim-elixir'
+Plug 'christoomey/vim-tmux-navigator'
+
 
 call plug#end()
 
