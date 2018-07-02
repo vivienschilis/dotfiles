@@ -6,13 +6,6 @@ set fileencoding=utf-8
 
 scriptencoding utf-8
 
-" Ignore this junk
-set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
-set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
-set wildignore+=*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
-set wildignore+=*/tmp/cache/assets/*/sprockets/*,*/tmp/cache/assets/*/sass/*
-set wildignore+=*.swp,*~,._*
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'gmarik/vundle'
@@ -53,7 +46,6 @@ Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'elixir-editors/vim-elixir'
 Plug 'christoomey/vim-tmux-navigator'
-
 
 call plug#end()
 
@@ -141,9 +133,6 @@ set grepprg=ag\ --nogroup\ --nocolor
 " Leader-S to search
 map <Leader>s :Ag -i ''<Left>
 
-" status line
-set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
-
 " Silent
 set noerrorbells visualbell t_vb=
 
@@ -172,10 +161,17 @@ cmap w!! w !sudo tee % >/dev/null
 
 set guifont=Menlo\ Regular:h18
 
+" Ignore this junk
 set wildignore+=*/.hg/*,*/.svn/*,*/vendor/cache/*,*/public/system/*,*/tmp/*,*/log/*,*/.git/*,*/.jhw-cache/*,*/solr/data/*,*/node_modules/*,*/.DS_Store
+set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
+set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
+set wildignore+=*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
+set wildignore+=*/tmp/cache/assets/*/sprockets/*,*/tmp/cache/assets/*/sass/*
+set wildignore+=*.swp,*~,._*
 
 " Prompt for a command to run
 map <Leader>vp :VimuxPromptCommand<CR>
 
 map <Leader>t :GoTest<CR>
 map <Leader>a :GoAlternate<CR>
+map <Leader>cv :GoCoverage<CR>

@@ -46,6 +46,11 @@ export EDITOR=vi
 
 export LC_ALL=en_US.UTF-8
 
+ZSH_THEME_GIT_PROMPT_PREFIX="["
+ZSH_THEME_GIT_PROMPT_SUFFIX="]"
+ZSH_THEME_GIT_PROMPT_DIRTY="*"
+ZSH_THEME_GIT_PROMPT_CLEAN=""
+
 PROMPT='$PROMPT_PREFIX  ${ret_status} %{$fg_bold[green]%}%p%{$fg[cyan]%}%c%{$fg_bold[blue]%} %% %{$reset_color%}'
 RPROMPT='$(git_prompt_info)'
 
@@ -69,8 +74,12 @@ bindkey '^w' backward-kill-word
 bindkey '^r' history-incremental-search-backward
 
 function zle-line-init zle-keymap-select {
-    VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
-    RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
+    case ${KEYMAP} in
+        (vicmd)      RPROMPT="%{$fg_bold[yellow]%} [% VIM]%  %{$reset_color%}" ;;
+        (main|viins) RPROMPT='$(git_prompt_info)' ;;
+        (*)          RPROMPT='$(git_prompt_info)' ;;
+    esac
+
     zle reset-prompt
 }
 
