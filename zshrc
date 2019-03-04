@@ -51,13 +51,21 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="]"
 ZSH_THEME_GIT_PROMPT_DIRTY="*"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
+function custom_git_prompt() {
+  if [[ $PWD != /vagrant* ]];
+  then
+    git_prompt_info
+  fi
+}
+
 PROMPT='$PROMPT_PREFIX  ${ret_status} %{$fg_bold[green]%}%p%{$fg[cyan]%}%c%{$fg_bold[blue]%} %% %{$reset_color%}'
-RPROMPT='$(git_prompt_info)'
+RPROMPT='$(custom_git_prompt)'
 
 # Misc aliases
 alias ll="ls -la"
 alias sr="screen -r"
 alias tmux="tmux -2"
+alias ag="ag --ignore vendor"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='ag -g ""'
@@ -76,8 +84,8 @@ bindkey '^r' history-incremental-search-backward
 function zle-line-init zle-keymap-select {
     case ${KEYMAP} in
         (vicmd)      RPROMPT="%{$fg_bold[yellow]%} [% VIM]%  %{$reset_color%}" ;;
-        (main|viins) RPROMPT='$(git_prompt_info)' ;;
-        (*)          RPROMPT='$(git_prompt_info)' ;;
+        (main|viins) RPROMPT='$(custom_git_prompt)' ;;
+        (*)          RPROMPT='$(custom_git_prompt)' ;;
     esac
 
     zle reset-prompt
