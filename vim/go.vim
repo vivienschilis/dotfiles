@@ -2,7 +2,7 @@ let b:goimports_vendor_compatible = 0
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 
-" let g:syntastic_go_checkers = ['go', 'golint', 'errcheck', 'govet']
+let g:go_metalinter_command = "golangci-lint"
 let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
 let g:go_metalinter_excludes = ['return value not checked', 'uses unkeyed fields']
 let b:go_metalinter_autosave = 1
