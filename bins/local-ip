@@ -1,2 +1,0 @@
-#!/usr/bin/env sh
-ifconfig | grep "inet\b" | grep -v 127 | awk '{ print $2 }'
