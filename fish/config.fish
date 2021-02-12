@@ -31,8 +31,6 @@ set -gx GOROOT /usr/local/go
 set -gxp PATH $GOROOT/bin
 set -gpx PATH $GOPATH/bin
 
-alias vi vim
-
 # Add fenv to path
 set fish_function_path $fish_function_path ~/plugin-foreign-env/functions
 
@@ -41,5 +39,7 @@ if test -e ~/.nix-profile/etc/profile.d/nix.sh
 	fenv source ~/.nix-profile/etc/profile.d/nix.sh
 end
 
+alias vim 'vim -p -N -n -u "~/.config/vim/vimrc"'
+alias vi vim
 
 direnv hook fish | source
