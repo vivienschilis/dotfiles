@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'bogado/file-line'         " Open at line
 Plug 'vim-scripts/tComment'
+Plug 'ntpeters/vim-better-whitespace'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'arthurxavierx/vim-caser'
@@ -528,3 +529,9 @@ nmap <Leader>gf <Plug>(grammarous-fixit)
 
 " vim: sw=2 sw=2 et
 let g:go_version_warning = 0
+
+" Display extra whitespace
+set list listchars=tab:»·,trail:·
+
+" Remove white spaces
+autocmd BufWritePre * :%s/\s\+$//e
