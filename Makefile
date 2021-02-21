@@ -33,5 +33,7 @@ apps:
 	nix-env -i tmux
 	nix-env -i tree
 	nix-env -i vim
+	NIXPKGS_ALLOW_UNFREE=1 nix-env -i ngrok
+	nix-env -i grpcurl
 
 .PHONY: all clean sync apps
