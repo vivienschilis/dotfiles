@@ -15,4 +15,23 @@ clean:
 	rm -f ~/.config/tmux
 	rm -f ~/.ignore
 
-.PHONY: all clean sync 
+apps:
+	nix-env -i aws-vault
+	nix-env -i awscli
+	nix-env -i curl
+	nix-env -i direnv
+	nix-env -i fish
+	nix-env -i fzf
+	nix-env -i git
+	nix-env -i go
+	nix-env -i htop
+	nix-env -i jq
+	nix-env -i jump
+	nix-env -i ripgrep
+	nix-env -i silver-searcher
+	nix-env -i terraform
+	nix-env -i tmux
+	nix-env -i tree
+	nix-env -i vim
+
+.PHONY: all clean sync apps
