@@ -31,6 +31,9 @@ set -gx GOROOT /usr/local/go
 set -gxp PATH $GOROOT/bin
 set -gpx PATH $GOPATH/bin
 
+# Simplify go modules with geckoboard
+set -gx GOPRIVATE "github.com/geckoboard/*"
+
 # Add fenv to path
 set fish_function_path $fish_function_path ~/plugin-foreign-env/functions
 
