@@ -1,38 +1,20 @@
 [user]
-  email = vivien.schilis@gmail.com
   name = Vivien Schilis
+  email = vivien.schilis@gmail.com
 [github]
-  username = vivienschilis
   user = vivienschilis
 [grep]
   linenumber = true
   extendedRegexp = true
 [push]
   default = current
-[alias]
-  s = status
-  ci = commit
-  co = checkout
-  gogogo = !git aa && git continue
-  continue = rebase --continue
-  skip = rebase --skip
-  di = diff
-  dc = diff --cached
-  amend = commit --amend
-  aa = add --all
-  head = !git l -1
-  r = !git l -30
-  l = log --graph --abbrev-commit --date=relative
-  pom = push origin master
-  pop = stash pop
-  b = branch
-  standup = log --since yesterday
 [core]
+  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
   pager = less -F -X
   editor = vim -f
   quotepath = false
   autocrlf = input
-  excludesfile = ~/.gitignore_global
+  excludesfile = ~/.config/git/ignore
 [color]
   ui = auto
 [format]
@@ -43,3 +25,5 @@
   enabled = true
 [credential]
   helper = store
+[pull]
+  rebase = false
