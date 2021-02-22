@@ -35,5 +35,6 @@ apps:
 	nix-env -i vim
 	NIXPKGS_ALLOW_UNFREE=1 nix-env -i ngrok
 	nix-env -i grpcurl
+	nix-env -iA nixpkgs.protobuf3_6
 
 .PHONY: all clean sync apps
