@@ -14,3 +14,23 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 ```
 :PLugInstall
 ```
+
+# setup nix and dev environment
+
+```
+curl -L https://nixos.org/nix/install | sh
+```
+
+Add `. /home/vagrant/.nix-profile/etc/profile.d/nix.sh` to `~/.bash_profile` or `~/bash_rc`
+
+```
+make apps
+```
+
+# vagrant
+
+Add `/home/vagrant/.nix-profile/bin/fish` to `/etc/shells`
+
+```
+chsh -s /home/vagrant/.nix-profile/bin/fish
+```
