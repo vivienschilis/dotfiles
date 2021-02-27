@@ -42,7 +42,10 @@ if test -e ~/.nix-profile/etc/profile.d/nix.sh
 	fenv source ~/.nix-profile/etc/profile.d/nix.sh
 end
 
-set -gx LOCALE_ARCHIVE (nix-env --installed --no-name --out-path --query glibc-locales)'/lib/locale/locale-archive'
+switch (uname)
+    case Linux
+	    set -gx LOCALE_ARCHIVE (nix-env --installed --no-name --out-path --query glibc-locales)'/lib/locale/locale-archive'
+end
 
 alias vim 'vim -p -N -n -u "~/.config/vim/vimrc"'
 alias vi vim
