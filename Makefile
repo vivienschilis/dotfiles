@@ -23,6 +23,7 @@ vagrant: apps
 
 osx: apps
 	nix-env -i terraform
+	nix-env -i go
 
 apps:
 	nix-env -i aws-vault
@@ -32,7 +33,6 @@ apps:
 	nix-env -i fish
 	nix-env -i fzf
 	nix-env -i git
-	nix-env -i go
 	nix-env -i htop
 	nix-env -i jq
 	nix-env -i jump
