@@ -1,7 +1,7 @@
 all: sync
 
 sync:
-
+	mkdir -p ~/.config
 	[ -f ~/.config/fish/config.fish ] || ln -s $(PWD)/fish ~/.config/fish
 	[ -f ~/.config/git/config ] || ln -s $(PWD)/git ~/.config/git
 	[ -f ~/.config/vim/vimrc ] || ln -s $(PWD)/vim ~/.config/vim
