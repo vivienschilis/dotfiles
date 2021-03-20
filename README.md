@@ -4,6 +4,14 @@ Highly inspired by [Faith's dotfiles](http://github.com/fatih/dotfiles)
 
 # setup vim-plug
 
+## Big Sur
+
+```
+sh <(curl -L https://nixos.org/nix/install) --darwin-use-unencrypted-nix-store-volume
+```
+
+## Linux
+
 ```
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
