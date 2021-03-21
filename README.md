@@ -4,13 +4,6 @@ Highly inspired by [Faith's dotfiles](http://github.com/fatih/dotfiles)
 
 # setup vim-plug
 
-## Big Sur
-
-```
-sh <(curl -L https://nixos.org/nix/install) --darwin-use-unencrypted-nix-store-volume
-```
-
-## Linux
 
 ```
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -25,17 +18,27 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 # setup nix and dev environment
 
+## Big Sur
+
+```
+sh <(curl -L https://nixos.org/nix/install) --darwin-use-unencrypted-nix-store-volume
+```
+
+```
+make osx
+```
+
+## vagrant
+
 ```
 curl -L https://nixos.org/nix/install | sh
 ```
 
-Add `. /home/vagrant/.nix-profile/etc/profile.d/nix.sh` to `~/.bash_profile` or `~/bash_rc`
+Add `. /home/vagrant/.nix-profile/etc/profile.d/nix.sh` to `~/.bash_profile` or `~/.bash_rc`
 
 ```
-make apps
+make vagrant
 ```
-
-# vagrant
 
 Add `/home/vagrant/.nix-profile/bin/fish` to `/etc/shells`
 
