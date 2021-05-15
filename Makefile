@@ -20,6 +20,7 @@ vagrant: apps
 	nix-env -iA nixpkgs.protobuf3_6
 	nix-env -i glibc-locales
 	nix-env -i grpcurl
+	nix-env -i cfssl
 
 osx: apps
 	nix-env -i terraform
