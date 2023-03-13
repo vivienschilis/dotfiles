@@ -27,7 +27,8 @@ set fish_greeting ""
 function __fish_describe_command; end
 
 set -gx GOPATH ~/go
-set -gx GOROOT /usr/local/go
+set -gx GOROOT /Users/vivien/.nix-profile/share/go
+
 set -gxp PATH $GOROOT/bin
 set -gpx PATH $GOPATH/bin
 
@@ -38,13 +39,12 @@ set -gx GOPRIVATE "github.com/geckoboard/*"
 set fish_function_path $fish_function_path ~/plugin-foreign-env/functions
 
 # Source Nix setup script
-if test -e ~/.nix-profile/etc/profile.d/nix.sh
-	fenv source ~/.nix-profile/etc/profile.d/nix.sh
-end
+fenv source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+fenv source /nix/var/nix/profiles/default/etc/profile.d/nix.sh
 
 switch (uname)
     case Linux
-	    set -gx LOCALE_ARCHIVE (nix-env --installed --no-name --out-path --query glibc-locales)'/lib/locale/locale-archive'
+	set -gx LOCALE_ARCHIVE (nix-env --installed --no-name --out-path --query glibc-locales)'/lib/locale/locale-archive'
 end
 
 alias vim 'vim -p -N -n -u "~/.config/vim/vimrc"'

@@ -15,17 +15,6 @@ clean:
 	rm -f ~/.config/tmux
 	rm -f ~/.ignore
 
-vagrant: apps
-	NIXPKGS_ALLOW_UNFREE=1 nix-env -i ngrok
-	nix-env -iA nixpkgs.protobuf3_6
-	nix-env -i glibc-locales
-	nix-env -i grpcurl
-	nix-env -i cfssl
-
-osx: apps
-	nix-env -i terraform
-	nix-env -i go
-
 apps:
 	nix-env -i aws-vault
 	nix-env -i awscli
@@ -42,6 +31,8 @@ apps:
 	nix-env -i tmux
 	nix-env -i tree
 	nix-env -i vim
+	nix-env -i cfssl
+	nix-env -i go
 
 
 .PHONY: all clean sync apps
