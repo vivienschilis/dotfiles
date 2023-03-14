@@ -6,3 +6,7 @@
 .direnv
 .envrc
 bundle
+
+# Devenv
+.devenv*
+devenv.*
