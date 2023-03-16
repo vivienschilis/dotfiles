@@ -3,6 +3,8 @@ set -gx GOBIN $HOME/go/bin
 set -gx EDITOR vim
 
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+set -g fish_user_paths "/opt/homebrew/bin" $fish_user_paths
+
 set -gxp PATH /usr/local/opt/python@3.9/libexec/bin
 
 # git prompt settings
