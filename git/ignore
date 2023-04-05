@@ -10,3 +10,4 @@ bundle
 # Devenv
 .devenv*
 devenv.*
+.env

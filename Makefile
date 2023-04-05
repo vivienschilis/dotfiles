@@ -33,6 +33,8 @@ apps:
 	nix-env -i vim
 	nix-env -i cfssl
 	nix-env -i go
+	nix-env -i node
+	nix-env -i terraform
 
 
 .PHONY: all clean sync apps
