@@ -33,6 +33,7 @@ set -gx GOROOT /Users/vivien/.nix-profile/share/go
 
 set -gxp PATH $GOROOT/bin
 set -gpx PATH $GOPATH/bin
+set -gpx PATH /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
 
 # Simplify go modules with geckoboard
 set -gx GOPRIVATE "github.com/geckoboard/*"
