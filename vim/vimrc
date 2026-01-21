@@ -14,7 +14,6 @@ Plug 'sainnhe/sonokai'
 Plug 'fatih/vim-go'
 Plug 'fatih/vim-hclfmt'
 Plug 'fatih/vim-nginx' , {'for' : 'nginx'}
-Plug 'hashivim/vim-hashicorp-tools'
 Plug 'godlygeek/tabular'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'junegunn/fzf.vim'
@@ -269,12 +268,6 @@ function! s:clear_highlight()
 endfunction
 nnoremap <silent> <leader><space> :<C-u>call <SID>clear_highlight()<CR>
 
-" echo the number under the cursor as binary, useful for bitwise operations
-function! s:echoBinary()
-  echo printf("%08b", expand('<cword>'))
-endfunction
-nnoremap <silent> gb :<C-u>call <SID>echoBinary()<CR>
-
 " Source the current Vim file
 nnoremap <leader>pr :Runtime<CR>
 
@@ -363,12 +356,6 @@ com! Q q
 " when you're in a function so fuck it, practicality beats purity.
 nnoremap <silent> * :let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>
 
-" mimic the behavior of /%Vfoobar which searches within the previously
-" selected visual selection
-" while in search mode, pressing / will do this
-vnoremap / <Esc>/\%><C-R>=line("'<")-1<CR>l\%<<C-R>=line("'>")+1<CR>l
-vnoremap ? <Esc>?\%><C-R>=line("'<")-1<CR>l\%<<C-R>=line("'>")+1<CR>l
-
 " Time out on key codes but not mappings.
 " Basically this makes terminal Vim work sanely.
 if !has('gui_running')
@@ -381,33 +368,6 @@ if !has('gui_running')
     au InsertLeave * set timeoutlen=1000
   augroup END
 endif
-
-" Visual Mode */# from Scrooloose {{{
-function! s:VSetSearch()
-  let temp = @@
-  norm! gvy
-  let @/ = '\V' . substitute(escape(@@, '\'), '\n', '\\n', 'g')
-  let @@ = temp
-endfunction
-
-vnoremap * :<C-u>call <SID>VSetSearch()<CR>//<CR><c-o>
-vnoremap # :<C-u>call <SID>VSetSearch()<CR>??<CR><c-o>
-
-" create a go doc comment based on the word under the cursor
-function! s:create_go_doc_comment()
-  norm "zyiw
-  execute ":put! z"
-  execute ":norm I// \<Esc>$"
-endfunction
-nnoremap <leader>ui :<C-u>call <SID>create_go_doc_comment()<CR>
-
-
-
-"===================== PLUGINS ======================
-
-" ==================== Fugitive ====================
-vnoremap <leader>gb :Gblame<CR>
-nnoremap <leader>gb :Gblame<CR>
 
 " ==================== vim-go ====================
 let g:go_fmt_fail_silently = 1
@@ -442,18 +402,6 @@ let g:go_version_warning = 0
 nmap <C-g> :GoDecls<cr>
 imap <C-g> <esc>:<C-u>GoDecls<cr>
 
-
-" run :GoBuild or :GoTestCompile based on the go file
-function! s:build_go_files()
-  let l:file = expand('%')
-  if l:file =~# '^\f\+_test\.go$'
-    call go#test#Test(0, 1)
-  elseif l:file =~# '^\f\+\.go$'
-    call go#cmd#Build(0)
-  endif
-endfunction
-
-
 augroup go
   autocmd!
 
@@ -471,8 +419,6 @@ augroup go
   autocmd FileType go nmap <silent> <Leader>sa <Plug>(go-alternate-edit)
   autocmd FileType go nmap <silent> <Leader>va <Plug>(go-alternate-vertical)
 augroup END
-
-
 
 " ==================== FZF ====================
 let g:fzf_command_prefix = 'Fzf'
@@ -522,7 +468,6 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
-
 " ==================== Various other plugin settings ====================
 nmap  -  <Plug>(choosewin)
 
@@ -532,7 +477,6 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 nmap <Leader>gi <Plug>(grammarous-open-info-window)
 nmap <Leader>gc <Plug>(grammarous-close-info-window)
 nmap <Leader>gf <Plug>(grammarous-fixit)
-
 
 " Display extra whitespace
 set list listchars=tab:»·,trail:·
