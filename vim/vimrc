@@ -33,6 +33,14 @@ Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
 Plug 'farmergreg/vim-lastplace'
 Plug 'dag/vim-fish'
+Plug 'esmuellert/nvim-eslint'
+
+" Async linter/fixer/lsp
+Plug 'w0rp/ale'
+
+" Typescript
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 
 call plug#end()
 
@@ -534,3 +542,16 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 " Allow cursor after last line character
 set virtualedit=onemore
+
+" ALE settings
+let g:ale_completion_enabled = 1
+let g:ale_completion_autoimport = 1
+let g:ale_sign_column_always = 1
+let g:ale_fix_on_save = 1
+let g:ale_preview_item_open_in = 'tab'
+let g:ale_set_balloons=1
+set omnifunc=ale#completion#OmniFunc
+
+map <Leader>d :ALEGoToDefinition -tab<CR>
+map <Leader>r :ALEFindReferences -tab<CR>
+map <Leader>g :ALEHover<CR>
