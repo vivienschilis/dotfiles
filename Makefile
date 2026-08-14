@@ -32,7 +32,7 @@ macos:
 	nix-env -i jq
 	nix-env -i jump
 	nix-env -i ripgrep
-	nix-env -i silver-searcher
+	nix-env -i silver-searcher-ng
 	nix-env -i tmux
 	nix-env -i tree
 	nix-env -i vim
@@ -55,7 +55,7 @@ ubuntu:
 	nix-env -i jq
 	nix-env -i jump
 	nix-env -i ripgrep
-	nix-env -i silver-searcher
+	nix-env -i silver-searcher-ng
 	nix-env -i tmux
 	nix-env -i tree
 	nix-env -i vim
