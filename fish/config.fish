@@ -49,8 +49,12 @@ set fish_function_path $fish_function_path ~/plugin-foreign-env/functions
 # Source Nix setup script
 fenv source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
 fenv source /nix/var/nix/profiles/default/etc/profile.d/nix.sh
-fenv source /etc/profile.d/service-discovery.sh
-fenv source /usr/local/share/chruby/chruby.sh
+if test -e /etc/profile.d/service-discovery.sh
+    fenv source /etc/profile.d/service-discovery.sh
+end
+if test -e /usr/local/share/chruby/chruby.sh
+    fenv source /usr/local/share/chruby/chruby.sh
+end
 
 alias vim 'vim -p -N -n -u "~/.config/vim/vimrc"'
 alias vi vim
