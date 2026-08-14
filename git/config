@@ -24,6 +24,6 @@
 [rerere]
   enabled = true
 [credential]
-  helper = store
+ helper = store
 [pull]
   rebase = false

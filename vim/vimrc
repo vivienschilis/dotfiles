@@ -496,6 +496,6 @@ let g:ale_preview_item_open_in = 'tab'
 let g:ale_set_balloons=1
 set omnifunc=ale#completion#OmniFunc
 
-map <Leader>d :ALEGoToDefinition -tab<CR>
-map <Leader>r :ALEFindReferences -tab<CR>
+map <Leader>d :ALEGoToDefinition<CR>
+map <Leader>r :ALEFindReferences<CR>
 map <Leader>g :ALEHover<CR>
