@@ -27,6 +27,7 @@ macos:
 	nix-env -i direnv
 	nix-env -i fish
 	nix-env -i fzf
+	nix-env -i gh
 	nix-env -i git
 	nix-env -i htop
 	nix-env -i jq
@@ -50,6 +51,7 @@ ubuntu:
 	nix-env -i direnv
 	nix-env -i fish
 	nix-env -i fzf
+	nix-env -i gh
 	nix-env -i git
 	nix-env -i htop
 	nix-env -i jq
