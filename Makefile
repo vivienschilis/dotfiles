@@ -1,15 +1,15 @@
 .PHONY: vim
 vim:
-	 ln -s ~/$(PWD)/vim ~/.config/vim
+	 ln -s $(CURDIR)/vim ~/.config/vim
 	 ln -s ~/.config/vim  ~/.vim
 
 .PHONY: sync
 sync:
 	mkdir -p ~/.config
-	[ -f ~/.config/fish/config.fish ] || ln -s $(PWD)/fish ~/.config/fish
-	[ -f ~/.config/git/config ] || ln -s $(PWD)/git ~/.config/git
-	[ -f ~/.config/tmux/tmux.conf ] || ln -s $(PWD)/tmux ~/.config/tmux
-	[ -f ~/.ignore ] || ln -s $(PWD)/ignore ~/.ignore
+	[ -f ~/.config/fish/config.fish ] || ln -s $(CURDIR)/fish ~/.config/fish
+	[ -f ~/.config/git/config ] || ln -s $(CURDIR)/git ~/.config/git
+	[ -f ~/.config/tmux/tmux.conf ] || ln -s $(CURDIR)/tmux ~/.config/tmux
+	[ -f ~/.ignore ] || ln -s $(CURDIR)/ignore ~/.ignore
 
 .PHONY: clean
 clean:
