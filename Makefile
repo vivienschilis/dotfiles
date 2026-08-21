@@ -22,7 +22,7 @@ clean:
 .PHONY:
 macos:
 	nix-env -i aws-vault
-	nix-env -i awscli
+	nix-env -i awscli2
 	nix-env -i curl
 	nix-env -i direnv
 	nix-env -i fish
