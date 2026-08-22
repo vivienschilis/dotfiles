@@ -39,10 +39,10 @@ macos:
 	nix-env -i vim
 	nix-env -i cfssl
 	nix-env -i go
-	nix-env -i node
+	nix-env -i nodejs
 	nix-env -i terraform
 	nix-env -i pstree
-	nix-env -i gsed
+	nix-env -i gnused
 
 
 .PHONY: ec2
