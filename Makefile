@@ -10,6 +10,8 @@ sync:
 	[ -f ~/.config/git/config ] || ln -s $(CURDIR)/git ~/.config/git
 	[ -f ~/.config/tmux/tmux.conf ] || ln -s $(CURDIR)/tmux ~/.config/tmux
 	[ -f ~/.ignore ] || ln -s $(CURDIR)/ignore ~/.ignore
+	mkdir -p ~/.claude
+	[ -f ~/.claude/CLAUDE.md ] || ln -s $(CURDIR)/claude/CLAUDE.md ~/.claude/CLAUDE.md
 
 .PHONY: clean
 clean:
@@ -18,6 +20,7 @@ clean:
 	rm -f ~/.config/git
 	rm -f ~/.config/tmux
 	rm -f ~/.ignore
+	rm -f ~/.claude/CLAUDE.md
 
 .PHONY:
 macos:
